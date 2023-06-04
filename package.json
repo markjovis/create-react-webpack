@@ -1,5 +1,5 @@
 {
-  "name": "create-react-webpack-app",
+  "name": "create-webpack-react-app",
   "version": "1.0.0",
   "description": "Create a React app boiler plate with webpack.",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "create-react-webpack-app": "bin/index.js"
+    "create-webpack-react-app": "bin/index.js"
   },
   "keywords": [
     "react",
