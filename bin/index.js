@@ -13,15 +13,27 @@ const isAllowedName = allowed.test(args);
 if (isAllowedName && dir) {
   shell.exec(`git clone https://github.com/markjovis/react-webpack-template.git ${dir} && rm -rf ${dir}/.git`);
 
-  exec(`npm --prefix ${dir} install`, (error, stdout) => {
-    if (error) {
-      console.error(`\x1b[31mError: ${error.message}`);
-      console.error('\x1b[0m');
-      return;
-    }
-    console.info(`\x1b[33mAll done: ${stdout}`);
-    console.info('\x1b[0m');
-  });
+  // exec(`npm --prefix ${dir} install`, (error, stdout) => {
+  //   if (error) {
+  //     console.error(`\x1b[31mError: ${error.message}`);
+  //     console.error('\x1b[0m');
+  //     return;
+  //   }
+  //   console.info(`\x1b[33mAll done: ${stdout}`);
+  //   console.info('\x1b[0m');
+  // });
+
+  exec('npm install', { cwd: dir }, (error, stdout) => {
+       if (error) {
+         console.error(`\x1b[31mError: ${error.message}`);
+         console.error('\x1b[0m');
+         return;
+       }
+       console.info(`\x1b[33mAll done: ${stdout}`);
+       console.info('\x1b[0m');
+     });
+
+
   console.info();
   console.info(`\x1b[32m Your app "${args}" was successfully created!`);
   console.info();

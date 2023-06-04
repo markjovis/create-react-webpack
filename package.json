@@ -9,7 +9,10 @@
   "bin": {
     "create-react-webpack-cli": "bin/index.js"
   },
-  "keywords": ["react", "webpack"],
+  "keywords": [
+    "react",
+    "webpack"
+  ],
   "author": "Mark Jovis",
   "license": "GNU",
   "dependencies": {
