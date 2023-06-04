@@ -18,7 +18,7 @@ const spin = (message) => {
       line = spinners[index];
     }
     std.write(`\x1b[32m${message} ${line}`);
-    readLine.cursorTo(std, 0, 0);
+    readLine.cursorTo(std, 0);
     index = index > spinners.length ? 0 : index + 1;
   }, 500);
 };

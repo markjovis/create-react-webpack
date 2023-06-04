@@ -12,24 +12,21 @@ const dir = args[count - 1];
 const allowed = /^[a-zA-Z].*/;
 const isAllowedName = allowed.test(args);
 
-console.clear();
-
 if (isAllowedName && dir) {
+  console.info('\x1b[32m');
   shell.exec(`git clone https://github.com/markjovis/react-webpack-template.git ${dir} && rm -rf ${dir}/.git`);
 
-  console.clear();
   stopId = spin('Installing npm packages. Please wait');
 
   exec('npm install', { cwd: dir }, (error, stdout) => {
     if (error) {
       clearInterval(stopId);
-      console.clear();
       console.error(`\x1b[31mError: ${error.message}`);
       console.error('\x1b[0m');
       return;
     }
     clearInterval(stopId);
-    console.clear();
+    console.info();
     console.info(`\x1b[33mAll done: ${stdout}`);
     console.info(`\x1b[32m Your app "${args}" was successfully created!`);
     console.info();
@@ -40,7 +37,6 @@ if (isAllowedName && dir) {
   });
 } else {
   clearInterval(stopId);
-  console.clear();
   console.error('\x1b[31mError: A valid "app name" is required! App name must start with a letter (a-z).\n'
     + 'App name can contain numbers but cannot start with numbers. No special characters allowed!');
   console.error('\x1b[0m');
