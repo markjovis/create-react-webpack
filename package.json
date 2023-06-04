@@ -16,6 +16,7 @@
   "author": "Mark Jovis",
   "license": "GNU",
   "dependencies": {
+    "cli-spinners": "^2.9.0",
     "shelljs": "^0.8.5"
   },
   "devDependencies": {
