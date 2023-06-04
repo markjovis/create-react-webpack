@@ -1,17 +1,18 @@
 {
-  "name": "create-react-webpack-cli",
-  "version": "1.0.3",
+  "name": "create-new-webpack-react",
+  "version": "1.0.0",
   "description": "Create a React app boiler plate with webpack.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "create-react-webpack-cli": "bin/index.js"
+    "create-new-webpack-react-app": "bin/index.js"
   },
   "keywords": [
     "react",
-    "webpack"
+    "webpack",
+    "boilerplate"
   ],
   "author": "Mark Jovis",
   "license": "GNU",
