@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 const { exec } = require('child_process');
 const shell = require('shelljs');
+const { rimraf } = require('rimraf');
 
 const { displayProgress, progressBar } = require('./progressbar');
 
@@ -14,7 +15,9 @@ const isAllowedName = allowed.test(args);
 if (isAllowedName && dir) {
   process.stdout.write('\x1b[32m');
   // shell.exec(`git clone https://github.com/markjovis/react-webpack-template.git ${dir} && rm -rf ${dir}/.git`);
-  shell.exec(`git clone https://github.com/markjovis/react-webpack-template.git ${dir} && rimraf ${dir}/.git`);
+  shell.exec(`git clone https://github.com/markjovis/react-webpack-template.git ${dir}`);
+  rimraf(`${dir}/.git`);
+
   displayProgress(false);
 
   exec('npm install', { cwd: dir }, (error, stdout) => {

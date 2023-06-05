@@ -17,6 +17,7 @@
   "author": "Mark Jovis",
   "license": "GNU",
   "dependencies": {
+    "rimraf": "^5.0.1",
     "shelljs": "^0.8.5",
     "terminal-kit": "^3.0.0"
   },
