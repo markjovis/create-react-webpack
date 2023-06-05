@@ -16,6 +16,10 @@
   ],
   "author": "Mark Jovis",
   "license": "GNU",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markjovis/create-react-webpack.git"
+  },
   "dependencies": {
     "rimraf": "^5.0.1",
     "shelljs": "^0.8.5",
