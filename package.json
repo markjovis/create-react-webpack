@@ -17,8 +17,8 @@
   "author": "Mark Jovis",
   "license": "GNU",
   "dependencies": {
-    "cli-spinners": "^2.9.0",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "terminal-kit": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^8.42.0",
