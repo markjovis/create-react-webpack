@@ -1,6 +1,6 @@
 {
   "name": "create-react-webpack-proj",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create a React app boiler plate with webpack.",
   "main": "index.js",
   "scripts": {
