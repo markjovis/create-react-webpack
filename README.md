@@ -7,8 +7,8 @@ No installation is needed if you use the npx command. If you prefer to install a
 `npm i -g create-react-webpack-proj`
 
 # Usage
-Simply run `npx create-react-webpack-proj my-app`, where "my-app" is the name of your new application project.
+From the directory where you want your new app project to be in, run `npx create-react-webpack-proj my-app` where "my-app" is the name of your new application project.
 
 If you installed the CLI, go to the directory where you want your new app project to be in, and run the following command:
 
-`create-react-webpack-proj`
+`create-react-webpack-proj my-app` where "my-app" is the name of your new application project.
